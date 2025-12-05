@@ -46,38 +46,58 @@ class Container:
             x.amount = share
             
                    
-            
+print("Creating 5 containers: A, B, C, D, E")
 A = Container()
 B = Container()
 C = Container()
 D = Container()
 E = Container()
+
+print(f"Adding 10 to A")
 A.addWater(10)
+print(f"Adding 15 to B")
 B.addWater(15)
+print(f"Adding 20 to C")
 C.addWater(20)
+print(f"Adding 2 to D")
 D.addWater(2)
+print(f"Adding 12 to E")
 E.addWater(12)
-print(A.amount)
-print(B.amount)
-print(C.amount)
-print(D.amount)
-print(E.amount)
+
 print('-------')
 
 
+print(f"Water in A: {A.amount}")
+print(f"Water in B: {B.amount}")
+print(f"Water in C: {C.amount}")
+print(f"Water in D: {D.amount}")
+print(f"Water in E: {E.amount}")
+
+print('-------')
+
+print("Connecting A to B and A to C")
 A.connectTo(B)
 A.connectTo(C)
-print(f'ABC amount per each: {A.amount}')
-print(f'ABC amount per each: {B.amount}')
-print(f'ABC amount per each: {C.amount}')
+print('-------')
 
+print(f'Water in A: {A.amount}')
+print(f"Water in B: {B.amount}")
+print(f"Water in C: {C.amount}")
+
+print('-------')
+
+print("Connecting D to E")
 print('-------')
 
 D.connectTo(E)
-print(f'DE amount per each: {D.amount}')
-print(f'DE amount per each: {E.amount}')
+print(f"Water in D: {D.amount}")
+print(f"Water in E: {E.amount}")
+
+print('-------')
+print("Connecting ABC to DE")
+print('-------')
 
 
 A.connectTo(D)
-print(f'Obshi: {A.amount}')
-print(f'Obshi: {D.amount}')
+print(f'Water in A: {A.amount}')
+print(f'Water in D: {D.amount}')
