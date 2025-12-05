@@ -44,3 +44,40 @@ class Container:
         #assign equal water
         for x in visited:
             x.amount = share
+            
+                   
+            
+A = Container()
+B = Container()
+C = Container()
+D = Container()
+E = Container()
+A.addWater(10)
+B.addWater(15)
+C.addWater(20)
+D.addWater(2)
+E.addWater(12)
+print(A.amount)
+print(B.amount)
+print(C.amount)
+print(D.amount)
+print(E.amount)
+print('-------')
+
+
+A.connectTo(B)
+A.connectTo(C)
+print(f'ABC amount per each: {A.amount}')
+print(f'ABC amount per each: {B.amount}')
+print(f'ABC amount per each: {C.amount}')
+
+print('-------')
+
+D.connectTo(E)
+print(f'DE amount per each: {D.amount}')
+print(f'DE amount per each: {E.amount}')
+
+
+A.connectTo(D)
+print(f'Obshi: {A.amount}')
+print(f'Obshi: {D.amount}')
