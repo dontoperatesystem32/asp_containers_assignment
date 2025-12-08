@@ -29,6 +29,10 @@ class Container:
                 
             #add to this container then redistribute
             else:
+                temp = self.amount
+                temp += amt
+                if temp < 0:
+                    raise ValueError("Amount cannot be added (integer overflow).")
                 self.amount += amt
         except ValueError as ve:
             print(ve)
